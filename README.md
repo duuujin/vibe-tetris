@@ -60,9 +60,6 @@
 - 확률 분포를 날카롭거나 평탄하게 만드는 역할
 - 높은 확률은 더 높게, 낮은 확률은 더 낮게 조정
 - 모든 후보 단어의 확률을 조정하여 다양한 응답을 가능하게 함
-    
-    ![image.png](attachment:2235aa9e-730e-41bd-bc41-f7f541fe9a31:image.png)
-    
 - 낮은 tmperature (0.5) : 높은 확률 단어(김치찌개)가 더 강화되어 일관성 있는 응답 생성.
 - 높은 tmperature (1.5) : 확률 분포가 평탄해져 다양한 단어가 선택될 가능성 증가.
 
@@ -70,10 +67,7 @@
 
 - 확률 분포의 범위 (상위 확률의 단어들만) 제한
 - 누적 확률 기준으로 단어 후보의 수를 제한
-- 응답의 신뢰성과 예측 가능성을 조정
-    
-    ![image.png](attachment:7256addc-9b32-4df3-9f8a-b7865a0783b9:image.png)
-    
+- 응답의 신뢰성과 예측 가능성을 조정  
 - 낮은 top_p (0.5) : “김치찌개”와 “된장찌개”만 후보로 남음
 - 높은 top_p (1.0) : 모든 단어를 후보로 포함
 
@@ -100,13 +94,5 @@
 
 - OpenAI 클라이언트를 초기화하고 API 키로 인증
 - 대화의 기본 지침(system)과 사용자 질문(user)을 conversation_history에 추가
-    
-    ![image.png](attachment:eed8ee5c-9a72-45e5-950d-a894a4e41250:image.png)
-    
 - OpenAI API에 conversation_history를 전달하여 응답 생성
-    
-    ![image.png](attachment:5487ea3d-e115-470b-95ca-010b9eb2d18b:image.png)
-    
 - 생성된 응답을 출력
-
-![image.png](attachment:fc55d891-c777-4c64-b27d-cc11438a2256:image.png)
